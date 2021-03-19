@@ -16,18 +16,19 @@
 package com.google.samples.motionlayoutcodelab
 
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.View
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.appbar.AppBarLayout
+
+import com.google.samples.motionlayoutcodelab.databinding.ActivityStep8Binding
 
 class Step8Activity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityStep8Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_step8)
+        binding = ActivityStep8Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         coordinateMotion()
     }

@@ -16,18 +16,18 @@
 package com.google.samples.motionlayoutcodelab
 
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData
 
-import kotlinx.android.synthetic.main.activity_step1.*
+import androidx.appcompat.app.AppCompatActivity
+
+import com.google.samples.motionlayoutcodelab.databinding.ActivityStep7WithHintBinding
 
 class Step7CompletedActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityStep7WithHintBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_step7_with_hint)
+        binding = ActivityStep7WithHintBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

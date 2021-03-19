@@ -16,17 +16,19 @@
 package com.google.samples.motionlayoutcodelab
 
 import android.os.Bundle
-import android.view.View
-import com.google.android.material.snackbar.Snackbar
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import kotlinx.android.synthetic.main.activity_step1.*
+import com.google.samples.motionlayoutcodelab.databinding.ActivityStep3Binding
 
 class Step3Activity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityStep3Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_step3)
+        binding = ActivityStep3Binding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
 }
