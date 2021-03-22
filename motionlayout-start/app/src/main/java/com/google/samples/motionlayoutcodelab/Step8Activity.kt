@@ -18,6 +18,7 @@ package com.google.samples.motionlayoutcodelab
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.appbar.AppBarLayout
 
 import com.google.samples.motionlayoutcodelab.databinding.ActivityStep8Binding
 
@@ -35,6 +36,10 @@ class Step8Activity : AppCompatActivity() {
 
     private fun coordinateMotion() {
         // TODO: set progress of MotionLayout based on an AppBarLayout.OnOffsetChangedListener
-
+        val listener = AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
+            val seekPosition: Float = -verticalOffset / binding.appbarLayout.totalScrollRange.toFloat()
+            binding.motionLayout.progress = seekPosition
+        }
+        binding.appbarLayout.addOnOffsetChangedListener(listener)
     }
 }

@@ -31,7 +31,9 @@
                 android:id="@+id/motion_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:minHeight="80dp"
                 app:layoutDescription="@xml/step8"
+                app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
                 app:motionDebug="SHOW_PATH">
 
                 <ImageView
@@ -44,7 +46,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/background" />
-
 
                 <ImageView
                     android:id="@+id/moon"
